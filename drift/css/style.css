@@ -1681,9 +1681,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 10px;
 }
 
-/*------Slideshow of Team Members----*/
+/*---------------------------------------------------------------
+                  Slideshow of Team Members
+  ---------------------------------------------------------------*/
 
-.container {
+.block {
   justify-content: center;
   align-items: center;
   padding-top: 30px;
@@ -1752,7 +1754,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-/*---Activity section----*/
+/*---------------------------------------------------
+                  Activity section
+  ---------------------------------------------------*/
 
 #activities .tabs-content {
   margin-left: 100px;
@@ -1767,6 +1771,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
   margin-top: 100px;
   padding: 0;
+  padding-top: 20%;
   list-style: none;
 }
 
@@ -1835,6 +1840,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-height: 100%;
   overflow: hidden;
   border-radius: 5px;
+  padding-top: 20%;
 }
 
 .tabs-content h4 {
@@ -1860,4 +1866,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-weight: 700;
   margin-bottom: 10px;
+}
+
+#tabs .main-rounded-button a {
+  text-align: center;
+  padding: 20px 30px;
+  width: 100%;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 19px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  background-color: #112363;
+}
+
+#tabs .main-rounded-button a:hover {
+  font-size: 22px;
+  background-color: #d61e1e;
+  transition: 0.3s all ease-in-out;
 }
