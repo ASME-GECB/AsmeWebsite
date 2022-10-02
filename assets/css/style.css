@@ -4,6 +4,7 @@ font & reset css
 --------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
 /* 
 ---------------------------------------------
 reset
@@ -172,29 +173,36 @@ body {
 }
 
 @media (max-width: 991px) {
+
   html,
   body {
     overflow-x: hidden;
   }
+
   .mobile-top-fix {
     margin-top: 30px;
     margin-bottom: 0px;
   }
+
   .mobile-bottom-fix {
     margin-bottom: 30px;
   }
+
   .mobile-bottom-fix-big {
     margin-bottom: 60px;
   }
 }
+
 .round {
   border-radius: 50%;
 }
+
 .section-heading {
   text-align: center;
   margin-top: 160px;
   margin-bottom: 80px;
 }
+
 .section-heading1 {
   text-align: center;
   margin-top: 10px;
@@ -210,6 +218,7 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 .section-heading1 h2 {
   font-size: 28px;
   font-weight: 800;
@@ -224,6 +233,7 @@ body {
   font-style: normal;
   color: #4e89e2;
 }
+
 .section-heading1 h2 em {
   font-style: normal;
   color: #4688ec;
@@ -377,6 +387,7 @@ header
 .header-area .main-nav .nav li a {
   color: #fff;
 }
+
 .header-area .main-nav .nav li .main-button:hover {
   color: #fff;
 }
@@ -544,6 +555,7 @@ header
     padding-left: 12px;
     padding-right: 12px;
   }
+
   .header-area .main-nav:before {
     display: none;
   }
@@ -553,11 +565,13 @@ header
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
+
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
     color: #4688ec !important;
     opacity: 1;
   }
+
   .header-area {
     background-color: #f7f7f7;
     padding: 0px 15px;
@@ -565,18 +579,23 @@ header
     box-shadow: none;
     text-align: center;
   }
+
   .header-area .container {
     padding: 0px;
   }
+
   .header-area .logo {
     margin-left: 30px;
   }
+
   .header-area .menu-trigger {
     display: block !important;
   }
+
   .header-area .main-nav {
     overflow: hidden;
   }
+
   .header-area .main-nav .nav {
     float: none;
     width: 100%;
@@ -587,25 +606,31 @@ header
     transition: all 0s ease 0s;
     margin-left: 0px;
   }
+
   .header-area .main-nav .nav li:first-child {
     border-top: 1px solid #eee;
   }
+
   .header-area .main-nav .nav li:last-child {
     width: 100%;
     background-color: #4688ec;
     color: #fff;
   }
+
   .header-area .main-nav .nav li:last-child a {
     background-color: #4688ec !important;
   }
+
   .header-area .main-nav .nav li:last-child a:hover,
   .header-area .main-nav .nav li:last-child:hover a {
     background-color: #4688ec !important;
     color: #fff !important;
   }
+
   .header-area.header-sticky .nav {
     margin-top: 80px !important;
   }
+
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
@@ -613,6 +638,7 @@ header
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
   .header-area .main-nav .nav li a {
     height: 50px !important;
     line-height: 50px !important;
@@ -621,13 +647,16 @@ header
     background: #f7f7f7 !important;
     color: #346096 !important;
   }
+
   .header-area .main-nav .nav li:last-child a {
     color: #fff !important;
   }
+
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
     color: #4688ec !important;
   }
+
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
     visibility: inherit;
@@ -640,21 +669,26 @@ header
     box-shadow: none;
     height: 0px;
   }
+
   .header-area .main-nav .nav li.submenu ul li a {
     font-size: 12px;
     font-weight: 400;
   }
+
   .header-area .main-nav .nav li.submenu ul li a:hover:before {
     width: 0px;
   }
+
   .header-area .main-nav .nav li.submenu ul.active {
     height: auto !important;
   }
+
   .header-area .main-nav .nav li.submenu:after {
     right: 25px;
     font-size: 14px;
     top: 15px;
   }
+
   .header-area .main-nav .nav li.submenu:hover ul,
   .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
@@ -684,6 +718,7 @@ banner
   position: relative;
   padding-top: 20px;
 }
+
 #space {
   padding: 19px 0px 5px 0px;
 }
@@ -729,6 +764,7 @@ banner
   from {
     opacity: 0.4;
   }
+
   to {
     opacity: 1;
   }
@@ -738,6 +774,7 @@ banner
   from {
     opacity: 0.4;
   }
+
   to {
     opacity: 1;
   }
@@ -749,6 +786,7 @@ banner
     font-size: 11px;
   }
 }
+
 #bg-video {
   min-width: 100%;
   min-height: 100vh;
@@ -818,10 +856,12 @@ banner
     color: black;
     margin-bottom: -50px;
   }
+
   30% {
     letter-spacing: 5px;
     margin-bottom: 50px;
   }
+
   85% {
     letter-spacing: 2px;
     margin-bottom: -10px;
@@ -838,12 +878,14 @@ features
 .team-members {
   position: relative;
 }
+
 .avatar {
   vertical-align: middle;
   border-radius: 50%;
   height: 100px;
   width: 100px;
 }
+
 .column {
   float: left;
   width: 33.3%;
@@ -908,9 +950,11 @@ subscribe
   background-size: cover;
   text-align: center;
 }
+
 #call-to-action img {
   align-items: center;
 }
+
 .imge {
   margin: auto;
   height: 70px;
@@ -919,6 +963,7 @@ subscribe
 
   position: relative;
 }
+
 .logo-small {
   height: 40px;
   padding-right: 20px;
@@ -929,6 +974,7 @@ subscribe
   height: 40px;
   width: 250px;
 }
+
 .impe {
   height: 270px;
 }
@@ -972,9 +1018,11 @@ Our Classes
 
   width: 100%;
 }
+
 #tabs ul li:last-child {
   margin-bottom: 0px;
 }
+
 #tabs ul li a {
   text-transform: capitalize;
   width: 100%;
@@ -996,6 +1044,7 @@ Our Classes
   font-size: 22px;
   box-shadow: inset 300px 0 0 0 #4688ec;
 }
+
 #tabs .main-rounded-button a {
   text-align: center;
   padding: 20px 30px;
@@ -1009,38 +1058,46 @@ Our Classes
   font-weight: 600;
   background-color: #4688ec;
 }
+
 #tabs .main-rounded-button a:hover {
   font-size: 22px;
   background-color: #d61e1e;
   transition: 0.3s all ease-in-out;
 }
+
 #tabs ul li a img {
   max-width: 100%;
   margin-right: 20px;
 }
+
 #tabs ul .ui-tabs-active span {
   background: #faf5b2;
   border: #faf5b2;
   line-height: 90px;
   border-bottom: none;
 }
+
 #tabs ul .ui-tabs-active a {
   color: #4688ec;
 }
+
 #tabs ul .ui-tabs-active span {
   color: #1e1e1e;
 }
+
 .tabs-content {
   margin-left: 30px;
   text-align: left;
   display: inline-block;
   transition: all 0.3s;
 }
+
 .tabs-content img {
   max-width: 100%;
   overflow: hidden;
   border-radius: 5px;
 }
+
 .tabs-content h4 {
   font-size: 23px;
   font-weight: 700;
@@ -1049,6 +1106,7 @@ Our Classes
   margin-bottom: 20px;
   margin-top: 30px;
 }
+
 .tabs-content p {
   font-size: 14px;
   color: #7a7a7a;
@@ -1056,20 +1114,24 @@ Our Classes
   word-wrap: break-word;
   white-space: pre-line;
 }
+
 .slideshow {
   display: flex;
   align-items: center;
   min-height: 100vh;
 }
+
 .wrapper {
   width: 100%;
   display: inline;
 }
+
 .wrapper .carousel {
   max-width: 1200px;
   margin: auto;
   padding: 0 30px;
 }
+
 .carousel .card {
   line-height: 250px;
   text-align: center;
@@ -1077,16 +1139,20 @@ Our Classes
 
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 .cardimg-1 {
   border-radius: 0px;
   height: 250px;
 }
+
 .cardimg-2 {
   height: 250px;
 }
+
 .cardimg-3 {
   height: 250px;
 }
+
 .cardimg-4 {
   height: 250px;
 }
@@ -1094,15 +1160,19 @@ Our Classes
 .cardimg-5 {
   height: 250px;
 }
+
 .cardimg-6 {
   height: 250px;
 }
+
 .cardimg-7 {
   height: 250px;
 }
+
 .cardimg-8 {
   height: 250px;
 }
+
 /* 
 ---------------------------------------------
 schedule
@@ -1158,10 +1228,12 @@ schedule
 #schedule .filters {
   margin-bottom: 40px;
 }
+
 #schedule .filters ul {
   padding: 0;
   text-align: center;
 }
+
 #schedule .filters ul li {
   list-style: none;
   display: inline;
@@ -1178,29 +1250,36 @@ schedule
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
 #schedule .filters ul li:after {
   content: "/";
   margin-left: 10px;
   color: #fff;
 }
+
 #schedule .filters ul li:last-child {
   margin-right: 0px;
 }
+
 #schedule .filters ul li:last-child::after {
   display: none;
 }
+
 #schedule .filters ul li.active,
 #schedule .filters ul li:hover {
   color: #4688ec;
 }
+
 #schedule .filters-content {
   margin-top: 50px;
 }
+
 #schedule .filters-content .show {
   opacity: 1;
   visibility: visible;
   transition: all 350ms;
 }
+
 #schedule .filters-content .hide {
   opacity: 0;
   visibility: hidden;
@@ -1448,28 +1527,36 @@ responsive
   .main-banner .caption h2 {
     font-size: 64px;
   }
+
   #features {
     margin-bottom: 110px;
   }
+
   #features .feature-item {
     margin-bottom: 30px;
   }
+
   #our-classes .tabs-content {
     margin-left: 0px;
     margin-top: 30px;
   }
+
   .trainer-item {
     margin-bottom: 30px;
   }
+
   #contact-us #map {
     margin-bottom: -7px;
   }
+
   #contact-us .contact-form {
     padding: 30px;
   }
+
   #contact-us .contact-form #contact {
     padding: 30px;
   }
+
   .QWS {
     background-color: #232d39;
     width: 100%;
