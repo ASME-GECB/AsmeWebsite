@@ -32,19 +32,25 @@ class ThumbProvider {
     const id = this.idfromIndex(index);
     const thumbGroupID = Math.floor(id / this.eventsPerGroup);
 
+    var tasks = [];
+
     // Loads thumb data if not in _thumbs
-    while (thumbGroupID >= this._maxThumbGroup) {
-      const response = await this.db
+    while (thumbGroupID > this._maxThumbGroup) {
+      var task = this.db
         .collection("thumbnails")
         .doc(this._maxThumbGroup.toString())
-        .get();
-      const data = response.data();
-      for (const key in data) {
-        this._thumbs[key] = data[key];
-      }
+        .get()
+        .then((response) => {
+          const data = response.data();
+          for (const key in data) {
+            this._thumbs[key] = data[key];
+          }
+        });
+      tasks.push(task);
       this._maxThumbGroup++;
     }
 
+    await Promise.all(tasks);
     return this._thumbs[id];
   }
   // Returns download url of posters

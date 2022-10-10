@@ -4,7 +4,7 @@ function $(id) {
 }
 
 // Renders single event at index
-function renderEvent(index) {
+async function renderEvent(index) {
   // Adds a container for an  event
   const newEvent = document.createElement("div");
   newEvent.className = "event";
@@ -13,7 +13,7 @@ function renderEvent(index) {
   $("container").appendChild(newEvent);
 
   // Gets data of event
-  thumbs.get(index).then(async (value) => {
+  await thumbs.get(index).then(async (value) => {
     // Container gets removed if null
     if (value == null) {
       $(`event-${index}`).remove();
@@ -40,12 +40,11 @@ function renderEvent(index) {
 let thumbs = new ThumbProvider();
 let loaded = 0;
 // Tries to Load 3 posts as soon as page loads
-thumbs.init().then(() => {
+thumbs.init().then(async () => {
   $("loading").remove();
-  renderEvent(0);
-  renderEvent(1);
-  renderEvent(2);
-  loaded += 3;
+
+  for (let i = 0; i < 10; i++) await renderEvent(i);
+  loaded += 10;
 });
 
 // Returns the fraction of scroll, 0 at start, 1 at end
