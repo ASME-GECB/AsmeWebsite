@@ -35,7 +35,7 @@ class ThumbProvider {
     var tasks = [];
 
     // Loads thumb data if not in _thumbs
-    while (thumbGroupID > this._maxThumbGroup) {
+    while (thumbGroupID >= this._maxThumbGroup) {
       var task = this.db
         .collection("thumbnails")
         .doc(this._maxThumbGroup.toString())

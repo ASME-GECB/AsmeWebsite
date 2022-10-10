@@ -6,7 +6,7 @@ class ThumbProvider {
     this.cur_id = 0;
     this._thumbs = new Map();
     this._maxThumbGroup = 0;
-    var doc = await thumbs.db.collection("state").doc("0").get();
+    var doc = await thumbs.db.collection("state_drift").doc("0").get();
     var state = doc.data();
     this.eventsCount = state["events_count"];
     this.serverStatus = state["server_status"];
@@ -32,19 +32,25 @@ class ThumbProvider {
     const id = this.idfromIndex(index);
     const thumbGroupID = Math.floor(id / this.eventsPerGroup);
 
+    var tasks = [];
+
     // Loads thumb data if not in _thumbs
     while (thumbGroupID >= this._maxThumbGroup) {
-      const response = await this.db
-        .collection("thumbnails")
+      var task = this.db
+        .collection("thumbnails_drift")
         .doc(this._maxThumbGroup.toString())
-        .get();
-      const data = response.data();
-      for (const key in data) {
-        this._thumbs[key] = data[key];
-      }
+        .get()
+        .then((response) => {
+          const data = response.data();
+          for (const key in data) {
+            this._thumbs[key] = data[key];
+          }
+        });
+      tasks.push(task);
       this._maxThumbGroup++;
     }
 
+    await Promise.all(tasks);
     return this._thumbs[id];
   }
   // Returns download url of posters
@@ -58,7 +64,7 @@ class ThumbProvider {
     }
     const id = this.idfromIndex(index);
     const response = await this.db
-      .collection("events")
+      .collection("events_drift")
       .doc(id.toString())
       .get();
     this.eventCache[index] = response.data();
@@ -68,7 +74,7 @@ class ThumbProvider {
   // Returns latest event of a type
   async latest(type) {
     const response = await this.db
-      .collection("events")
+      .collection("events_drift")
       .where("type", "==", type)
       .orderBy("date", "desc")
       .limit(1)
